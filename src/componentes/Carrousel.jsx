@@ -8,7 +8,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import "../style/Carrousel.css";
-
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
 
@@ -29,9 +28,9 @@ export default function App() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>Los Roques</SwiperSlide>
+        <SwiperSlide>Europa</SwiperSlide>
+        <SwiperSlide>Canada</SwiperSlide>
         <SwiperSlide>Slide 4</SwiperSlide>
         <SwiperSlide>Slide 5</SwiperSlide>
         <SwiperSlide>Slide 6</SwiperSlide>
