@@ -12,10 +12,13 @@ import imageeuropa from "../images/europa 1.jpg"
 import imagelosroques from "../images/Los-Roques-1.jpg"
 import imagesantorini from "../images/santorini.jpg"
 import imagecabohaitiano from "../images/cabohaitiano.jpg"
-import imagecitadelle from "../images/citadelle.jpg"
-import imagejamaica from "../images/jamaica.jpg"
 import imagedubai from "../images/dubai.jpg"
-import imagecostarica from "../images/costarica.jpg"
+import imagesidney from "../images/sidney.jpeg"
+import imagemurallachina from "../images/muralla china.jpeg"
+import imageushuaia from "../images/ushuaia.jpg"
+import imagesaltoangel from "../images/salto angel.jpeg"
+import imagelluvizna from "../images/llovizna.jpeg"
+import imagenewyork from "../images/new york.jpeg"
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
 
@@ -48,20 +51,22 @@ export default function App() {
         <SwiperSlide>
           <div className="containerimage"> 
             <img className="imagecarrousel" src={imagecabohaitiano}/>
-            <img className="imagecarrousel"src={imagecitadelle}/>
-            <img className="imagecarrousel"src={imagejamaica}/>
             <img className="imagecarrousel" src={imagedubai}/>
+            <img className="imagecarrousel" src={imagesidney}/> 
+            <img className="imagecarrousel" src={imagemurallachina}/>
         </div>
         </SwiperSlide>
 
         <SwiperSlide>
         <div className="containerimage"> 
-            <img className="imagecarrousel" src={imagecostarica}/>
+        <img className="imagecarrousel" src={imageushuaia}/>
+        <img className="imagecarrousel" src={imagesaltoangel}/>
+        <img className="imagecarrousel" src={imagelluvizna}/>
+        <img className="imagecarrousel" src={imagenewyork}/> 
             
         </div>
         </SwiperSlide>
 
-        <SwiperSlide>Slide 6</SwiperSlide>
         
       </Swiper>
     </>
