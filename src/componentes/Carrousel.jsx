@@ -6,8 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import "../style/Carrousel.css";
+
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
 
@@ -28,9 +28,9 @@ export default function App() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>Los Roques</SwiperSlide>
-        <SwiperSlide>Europa</SwiperSlide>
-        <SwiperSlide>Canada</SwiperSlide>
+        <SwiperSlide><img src="../images/canada 1.jpg" alt="Canada" /></SwiperSlide>
+        <SwiperSlide><img src="../images/europa 1.jpg" alt="Europa" /></SwiperSlide>
+        <SwiperSlide><img src="../images/Los-Roques-1.jpg" alt="Los roques" /></SwiperSlide>
         <SwiperSlide>Slide 4</SwiperSlide>
         <SwiperSlide>Slide 5</SwiperSlide>
         <SwiperSlide>Slide 6</SwiperSlide>
