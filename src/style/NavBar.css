@@ -1,0 +1,27 @@
+.NavBar{
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background-color: rgb(0, 132, 255);
+    flex-direction: row;
+    text-decoration: none;
+
+}
+
+.NavBar ul{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+
+}
+.Navli{
+    text-decoration: none;
+    width: 20%;
+    list-style: none;
+}

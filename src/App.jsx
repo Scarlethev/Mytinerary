@@ -1,14 +1,16 @@
-import './App.css';
-// import { Bulb } from './componentes/Bulb';
-//import {BreadcrumbExample} from './componentes/Breadcrumb';
+import NavBar  from './componentes/NavBar';
+import './style/NavBar.css';
 import Carrousel from './componentes/Carrousel';
 import './style/Carrousel.css';
+
 function App() {
 
       //PARTE LOGICA//
   return (
     <div className="App">
+      <NavBar/>
       <Carrousel/>
+      
      {/* <BreadcrumbExample/> */}
     </div>
   
@@ -16,3 +18,4 @@ function App() {
 }
 
 export default App;
+
