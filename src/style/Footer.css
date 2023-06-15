@@ -13,5 +13,15 @@
     flex-direction: row;
     justify-content:space-evenly;
     align-items: center;
+    color: white;
 }
 
+.copyright{
+    justify-content: center;
+    display: flex;
+    background-color: black;
+}
+  
+.copyright h4{
+    color: white;
+}
