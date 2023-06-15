@@ -1,5 +1,5 @@
 import "../style/NavBar.css"
-import imagelogo1 from "../images/logo-1.jpg"
+import imagelogo1 from "../images/logo-1.png"
 import User from "../images/user.jpeg"
 import { Link as LinkRouter } from "react-router-dom"
 
