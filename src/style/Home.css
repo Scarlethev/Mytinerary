@@ -1,0 +1,59 @@
+
+.callAction{
+    display:flex;
+    height: 70px;
+    max-width:250px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    color:#000;
+    text-decoration: none;
+    font-size: 1.5em;
+    background-color: yellow;
+   
+}
+
+.callAction:hover{
+    cursor: pointer;
+}
+
+.animate__animated.animate__flash {
+    --animate-duration: 2.5s;    
+  }
+
+
+.slogan{
+display:flex;
+justify-content: center;
+align-items: center;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-style: italic; 
+min-height: 150px;
+height: auto;
+color: #5a5656;
+text-align: center;
+font-size:2em;
+max-width: 100%;
+}
+
+@media screen and (max-width: 540px){
+    .textoEnConstruccion > h1{
+    text-align: center;
+    flex-wrap: wrap;
+    width:80%;
+}
+}
+
+@media screen and (max-width: 540px){
+  .textoEnConstruccion > h1{
+  text-align: center;
+  flex-wrap: wrap;
+  width:80%;
+}
+}
+
+

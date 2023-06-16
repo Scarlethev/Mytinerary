@@ -1,7 +1,14 @@
+import "../style/User.css"
+import Inconstruction from "../images/EnConstruccion.jpg"
+
 
 export default function User(){
     return(
-
-        <h1>Estoy en USER</h1>
+        <>
+        <div className="textoEnConstruccion">
+        <h1>This website User is in construction</h1>
+        <img src={Inconstruction}/>
+        </div>
+        </>
     )
 }

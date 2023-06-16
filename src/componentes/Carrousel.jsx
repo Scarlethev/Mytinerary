@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -39,35 +40,71 @@ export default function App() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide> 
-          <div className="containerimage"> 
-            <img className="imagecarrousel" src={imagecanada}/>
-            <img className="imagecarrousel"src={imageeuropa}/>
-            <img className="imagecarrousel"src={imagelosroques}/>
-            <img className="imagecarrousel" src={imagesantorini}/>
-        </div>
+        <SwiperSlide>
+          <div className="containerimage">
+            <div className="imagecarrousel">
+              <img className ="imagen" src={imagecanada}/>
+              <h3 className="tituloCarrousel">Canada</h3>
+            </div>
+            <div className="imagecarrousel">
+            <img className="imagen" src={imageeuropa} />
+            <h3 className="tituloCarrousel">France</h3>
+            </div>
+            <div className="imagecarrousel">
+            <img className="imagen" src={imagelosroques} />
+            <h3 className="tituloCarrousel">Venezuela</h3>
+            </div>
+            <div className="imagecarrousel">
+            <img className="imagen" src={imagesantorini} />
+            <h3 className="tituloCarrousel">Greece</h3>
+            </div>
+          </div>
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="containerimage"> 
-            <img className="imagecarrousel" src={imagecabohaitiano}/>
-            <img className="imagecarrousel" src={imagedubai}/>
-            <img className="imagecarrousel" src={imagesidney}/> 
-            <img className="imagecarrousel" src={imagemurallachina}/>
-        </div>
+          <div className="containerimage">
+          <div className="imagecarrousel">
+            <img className="imagen" src={imagecabohaitiano}/>
+            <h3 className="tituloCarrousel">Haiti</h3>
+            </div>
+            <div className="imagecarrousel">
+            <img className="imagen" src={imagedubai} />
+            <h3 className="tituloCarrousel">United Arab Emirates</h3>
+            </div>
+            <div className="imagecarrousel">
+            <img className="imagen" src={imagesidney} />
+            <h3 className="tituloCarrousel">Australia</h3>
+            </div>
+            <div className="imagecarrousel">
+            <img className="imagen" src={imagemurallachina} />
+            <h3 className="tituloCarrousel">China</h3>
+            </div>
+          </div>
         </SwiperSlide>
 
         <SwiperSlide>
-        <div className="containerimage"> 
-        <img className="imagecarrousel" src={imageushuaia}/>
-        <img className="imagecarrousel" src={imagesaltoangel}/>
-        <img className="imagecarrousel" src={imagelluvizna}/>
-        <img className="imagecarrousel" src={imagenewyork}/> 
-            
-        </div>
+          <div className="containerimage">
+          <div className="imagecarrousel">
+            <img className="imagen" src={imageushuaia} />
+            <h3 className="tituloCarrousel">Argentina</h3>
+            </div>
+            <div className="imagecarrousel">
+            <img className="imagen" src={imagesaltoangel} />
+            <h3 className="tituloCarrousel">Venezuela</h3>
+            </div>
+            <div className="imagecarrousel">
+            <img className="imagen" src={imagelluvizna} />
+            <h3 className="tituloCarrousel">Argentina</h3>
+            </div>
+            <div className="imagecarrousel">
+            <img className="imagen" src={imagenewyork} />
+            <h3 className="tituloCarrousel">U.S.A</h3>
+            </div>
+
+          </div>
         </SwiperSlide>
 
-        
+
       </Swiper>
     </>
   );

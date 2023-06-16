@@ -1,5 +1,5 @@
 import "../style/Footer.css"
-import { FaUser, FaHome, FaHeart } from 'react-icons/fa';
+
 
 
 export default function Footer() {
@@ -26,14 +26,6 @@ export default function Footer() {
                         <p>CAPITAL FEDERAL, ARGENTINA</p>
                     </div>
                 </div>
-               
-                { <div className="icons-rrss">
-       <button><i className="fa-brands fa-twitter"></i></button>
-            <button><i className="fa-brands fa-facebook-f"></i></button>
-            <button><i className="fa-brands fa-instagram"></i></button>
-            <button><i className="fa-brands fa-youtube"></i></button>
-        </div> } 
-        
          </section>
             <section className="copyright">
                 <h4>COPYRIGTH @ 2023 by</h4>

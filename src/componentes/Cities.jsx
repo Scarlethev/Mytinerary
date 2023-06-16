@@ -1,7 +1,14 @@
-
+import "../style/Cities.css"
+import Inconstruction from "../images/EnConstruccion.jpg"
 
 export default function Cities(){
 return(
-<h1>Estoy en cities</h1>
+<>
+<div className="textoEnConstruccion">
+<h1>
+This website Cities is in construction</h1>
+ <img src={Inconstruction}/>
+ </div>
+ </>
 )
 }
