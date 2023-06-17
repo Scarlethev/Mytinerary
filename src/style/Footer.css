@@ -3,7 +3,7 @@
     flex-direction: row;
     height: 200px;
     width:100%;
-    background-color: rgb(0, 132, 255);
+    background: linear-gradient(#e66465, #9198e5);
     margin-top: 60px;
 }
 
@@ -14,18 +14,19 @@
     flex-direction: row;
     justify-content:space-evenly;
     align-items: center;
-    color: white;
+    color: rgb(5, 2, 2);
 }
 
 .copyright{
     justify-content: center;
     display: flex;
     background-color: black;
+    background: linear-gradient( #9198e5,#040404);
     height: auto;
 }
   
 .copyright h4{
-    color: white;
+    color: rgb(12, 2, 2);
 }
 
 
