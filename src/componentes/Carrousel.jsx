@@ -26,6 +26,9 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 export default function App() {
   return (
     <>
+
+    <h1 className="tituloPopular">Popular MYtineraries</h1>
+
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -77,7 +80,7 @@ export default function App() {
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imagemurallachina} />
-            <h3 className="tituloCarrousel">Golfo de Bohay</h3>
+            <h3 className="tituloCarrousel">Bohai Sea</h3>
             </div>
           </div>
         </SwiperSlide>
@@ -90,7 +93,7 @@ export default function App() {
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imagesaltoangel} />
-            <h3 className="tituloCarrousel">Parque Nacional Canaima</h3>
+            <h3 className="tituloCarrousel">National Park Canaima</h3>
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imageiguazu} />

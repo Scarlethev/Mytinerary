@@ -40,6 +40,12 @@
 
   }
 
+  .tituloPopular{
+    display:Flex;
+    justify-content: center;
+    height: auto;
+  }
+
   .tituloCarrousel{
     position: absolute;
     bottom: 0;
