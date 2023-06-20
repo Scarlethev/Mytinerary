@@ -39,7 +39,15 @@ text-align: center;
 font-size:2em;
 max-width: 100%;
 }
-
+.backgrown{
+  background-image: url("../images/welcome.jpeg");
+  height: 250px;
+  width: 100% ;
+  position: relative;
+  background-repeat: no-repeat ;
+  background-size: cover;
+  
+}
 @media screen and (max-width: 540px){
     .textoEnConstruccion > h1{
     text-align: center;

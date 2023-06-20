@@ -18,7 +18,7 @@ import imagesidney from "../images/sidney.jpeg"
 import imagemurallachina from "../images/muralla china.jpeg"
 import imageushuaia from "../images/ushuaia.jpg"
 import imagesaltoangel from "../images/salto angel.jpeg"
-import imagelluvizna from "../images/llovizna.jpeg"
+import imageiguazu from "../images/iguazu.jpeg"
 import imagenewyork from "../images/new york.jpeg"
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
@@ -44,19 +44,19 @@ export default function App() {
           <div className="containerimage">
             <div className="imagecarrousel">
               <img className ="imagen" src={imagecanada}/>
-              <h3 className="tituloCarrousel">Canada</h3>
+              <h3 className="tituloCarrousel">Toronto</h3>
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imageeuropa} />
-            <h3 className="tituloCarrousel">France</h3>
+            <h3 className="tituloCarrousel">Paris</h3>
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imagelosroques} />
-            <h3 className="tituloCarrousel">Venezuela</h3>
+            <h3 className="tituloCarrousel">Bolivar</h3>
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imagesantorini} />
-            <h3 className="tituloCarrousel">Greece</h3>
+            <h3 className="tituloCarrousel">Santorini</h3>
             </div>
           </div>
         </SwiperSlide>
@@ -65,19 +65,19 @@ export default function App() {
           <div className="containerimage">
           <div className="imagecarrousel">
             <img className="imagen" src={imagecabohaitiano}/>
-            <h3 className="tituloCarrousel">Haiti</h3>
+            <h3 className="tituloCarrousel">Cap-Haitien</h3>
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imagedubai} />
-            <h3 className="tituloCarrousel">United Arab Emirates</h3>
+            <h3 className="tituloCarrousel">Dubaï</h3>
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imagesidney} />
-            <h3 className="tituloCarrousel">Australia</h3>
+            <h3 className="tituloCarrousel">Sydney</h3>
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imagemurallachina} />
-            <h3 className="tituloCarrousel">China</h3>
+            <h3 className="tituloCarrousel">Golfo de Bohay</h3>
             </div>
           </div>
         </SwiperSlide>
@@ -86,19 +86,19 @@ export default function App() {
           <div className="containerimage">
           <div className="imagecarrousel">
             <img className="imagen" src={imageushuaia} />
-            <h3 className="tituloCarrousel">Argentina</h3>
+            <h3 className="tituloCarrousel">Ushuaia</h3>
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imagesaltoangel} />
-            <h3 className="tituloCarrousel">Venezuela</h3>
+            <h3 className="tituloCarrousel">Parque Nacional Canaima</h3>
             </div>
             <div className="imagecarrousel">
-            <img className="imagen" src={imagelluvizna} />
-            <h3 className="tituloCarrousel">Argentina</h3>
+            <img className="imagen" src={imageiguazu} />
+            <h3 className="tituloCarrousel">Puerto Iguazú</h3>
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imagenewyork} />
-            <h3 className="tituloCarrousel">U.S.A</h3>
+            <h3 className="tituloCarrousel">New York</h3>
             </div>
 
           </div>
