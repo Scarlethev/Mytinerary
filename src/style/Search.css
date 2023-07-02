@@ -1,6 +1,21 @@
 .search{
-    height: 200px;
-    background-color:#ffffff6d;
-    text-align-last: center;
-    text-justify: center;
+    height: 150px;
+    background: #268aeda3;
+    display: flex;;
+    justify-content:space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.search h1{
+    color:rgba(234, 240, 246, 0.8);
+    justify-content: center;
+}
+
+.search .input{
+    width:200px;
+    height: 40px;
+    justify-content: center;
+    align-items:center;
 }

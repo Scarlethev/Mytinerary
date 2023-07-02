@@ -8,7 +8,7 @@ export default function Welcome() {
             <div className="backgroundImg">
             <div className="slogan">
             <h1 className="tituloUno">FIND YOU PERFECT TRIP</h1>
-            <h2 className="tituloDos">designed by insiders who know and love their cities!</h2>
+            <h2 className="tituloDos">Designed by insiders who know and love their cities! </h2>
             </div>
             <div className="callAction">
             <CallAction/>
