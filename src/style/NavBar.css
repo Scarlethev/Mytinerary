@@ -9,7 +9,7 @@
     width:90vw;
 }
 
-.NavBar{
+.navbar{
     width:100%;
     height: 150px;
     position: relative;
@@ -19,7 +19,7 @@
     flex-direction: row;
     text-decoration: none;
     margin-right: 30px;
-    background: linear-gradient(#ffffffd6, #040f85);
+    background:white;
 }
 
 .Navli{
@@ -50,7 +50,6 @@
     list-style: none;
     font-size: 20px;
 }
-
 
 
 .User{

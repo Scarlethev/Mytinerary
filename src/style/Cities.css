@@ -7,6 +7,31 @@
     margin-top: 20px;
 }
 
+.cards{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    height: auto;
+    column-gap: 20px;
+    row-gap: 40px;
+    margin-top: 20px;
+}
+
+.card{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card :hover{
+    transform: scale(0.3) ;
+    opacity: 0.7;
+    -webkit-transform: scale(1.1) ;
+    -moz-transform: scale(1.1) ;
+}
+
+
+
 @media screen and (max-width: 440px){
     .textoEnConstruccion > h1{
         font-size: 1.5em;

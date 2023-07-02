@@ -3,7 +3,7 @@
     flex-direction: row;
     height: 200px;
     width:100%;
-    background: linear-gradient(#ffffffd6, #040f85);
+    background:rgb(51, 112, 226);
     margin-top: 60px;
 }
 
@@ -24,7 +24,7 @@
     justify-content: center;
     display: flex;
     background-color: black;
-    background: linear-gradient( #9198e5,#040404);
+    background:rgb(51, 112, 226);
     height: auto;
 }
   
