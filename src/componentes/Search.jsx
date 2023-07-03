@@ -1,15 +1,18 @@
-import "../style/Search.css"
+// import "../style/Search.css"
+// import Input from React
+// import React from "react"
 
-function Search() {
-    return (
-        <div className="search">
-            <h1>CITIES</h1>
-            <input className="input" type="search" name="input" id="input" />
-    
-        </div>
-    )
-}
+// function Search() {
+//     let value;
+//     async function Value() {
+//         value = input.value
+//         console.log(value)
+//       }
+//       useEffect(() => {
+//         Value()
+//       }, [])
+// }
 
-export default Search
+// export default Search
 
 

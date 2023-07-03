@@ -19,7 +19,7 @@
   .backgroundImg{
     position: relative;
     z-index: 10;
-    background-color: rgba(14, 14, 14, 0.36);
+    background-color: rgba(22, 53, 157, 0.36);
     height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
