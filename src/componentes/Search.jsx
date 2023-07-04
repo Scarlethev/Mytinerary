@@ -10,7 +10,7 @@ const [search, setSearch] =useState ("")
 const URL = '' //link de la ruta
 const showCities = async()=> {
 const response = await fetch(URL)
-const dataCities = await reponse.json()
+const dataCities = await reponse .json()
 
 console.log(dataCities)
 setCities(dataCities)
