@@ -11,8 +11,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import {Link as LinkRouter } from 'react-router-dom';
-import { IconName } from "react-icons/fc";
-import { FaBeer, FaLanguage} from "react-icons/fa";
+//import { IconName } from "react-icons/fc";
+//import { FaBeer, FaLanguage} from "react-icons/fa";
 import * as React from 'react'
 
 
@@ -56,11 +56,11 @@ function Cities() {
                   </Typography>
                   <div className="iconosCard">
                     <Typography variant="body" component="div">
-                      <FaBeer />
+                      {/* <FaBeer /> */}
                       {city.currency}
                     </Typography>
                     <Typography variant="body" component="div">
-                    <FaLanguage/>
+                    {/* <FaLanguage/> */}
                       {city.language}
                     </Typography>
                   </div>
