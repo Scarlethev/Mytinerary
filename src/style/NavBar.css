@@ -9,28 +9,36 @@
     width:90vw;
 }
 
-.navbar{
+.NavBar{
     width:100%;
     height: 150px;
     position: relative;
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items: center;
     flex-direction: row;
     text-decoration: none;
     margin-right: 30px;
-    background:white;
+    background:rgb(51, 112, 226);
+    font-size: 20px;
 }
 
-.Navli{
-    position: relative;
+.NavBar a{
     text-decoration: none;
-    list-style: none;
+
 }
 
-.Navli:hover{
+.NavLi{
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.NavLi:hover{
   cursor: pointer;
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 
 .logoYtext{
@@ -48,15 +56,16 @@
 .MyItinerary{
     text-decoration: none;
     list-style: none;
-    font-size: 20px;
+    font-size: 25px;
+    color:#fff;
 }
 
 
 .User{
-    width:70px;
-    height: 70px;
-    border-radius: 48%;
+width:60px;
+height: 50px;
 }
+
 
 
 @media screen and (max-width: 440px) {

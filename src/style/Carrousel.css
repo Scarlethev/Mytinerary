@@ -5,7 +5,7 @@
 
   }
 
-  .swipe-wrapper{
+  .swipe-wrapper {
     height: 300px;
   }
 
@@ -17,130 +17,155 @@
     justify-content: center;
     align-items: center;
   }
-  
-  .containerimage{
+
+  .containerimage {
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    height:100%;
+    height: 100%;
     flex-wrap: wrap;
   }
-  
-  .imagecarrousel{
+
+  .imagecarrousel {
     position: relative;
     width: 25%;
     height: 100%;
   }
 
-  .imagen{
-    width:100%;
+  .imagen {
+    width: 100%;
     height: 300px;
 
   }
 
-  .tituloPopular{
-    display:Flex;
+  .tituloPopular {
+    display: Flex;
     justify-content: center;
-    height: auto;
+    align-items: center;
+    height: 200px;
+    width:100%;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    text-align: center;
+    color:rgba(36, 45, 56, 0.911);
+    background-color: #f5f4f3;
+  }
+  
+
+  h1 {
+    margin: 0;
   }
 
-  .tituloCarrousel{
+  .tituloCarrousel {
     position: absolute;
     bottom: 0;
-    left:0;
-    width:100%;
-    height: 20%;
+    left: 0;
+    width: 100%;
+    height: 30%;
     background-color: #ffffff6b;
     opacity: 5;
-    color: #000;
+    color: #000000;
+    font-weight: 700;
+    font-size: 1.7rem;
+    margin-top: 20px;
+    font-family: sans-serif;
   }
 
   @media screen and (max-width: 390px) {
 
-    .swiper{
-      display:flex;
+    .swiper {
+      display: flex;
       flex-direction: column;
       height: auto;
     }
 
-    .swiper-initialized .swiper-vertical .mySwiper{
-      display:flex;
+    .swiper-initialized .swiper-vertical .mySwiper {
+      display: flex;
       flex-direction: column;
     }
-    
-      .swipe-wrapper{
-        height: auto;
-        width:100%;
-        flex-wrap: wrap;
-      }
 
-
-      .containerimage{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 100%;
-        flex-wrap: wrap;
-      }
-
-      .imagecarrousel{
-        position: relative;
-        width: 100%;
-        height: auto;
-      }
-     
-
-
-
+    .swipe-wrapper {
+      height: auto;
+      width: 100%;
+      flex-wrap: wrap;
     }
 
 
-    @media (min-width: 391px) and (max-width: 768px) {
-
-      .swiper{
-        display:flex;
-        flex-direction: row;
-        height: auto;
+    .containerimage {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
       flex-wrap: wrap;
-      }
-  
-      .swiper-initialized .swiper-vertical .mySwiper{
-        display:flex;
-        flex-direction: row;
-      }
-      
-        .swipe-wrapper{
-          height: auto;
-          width:100%;
-          flex-wrap: wrap;
-        }
-  
-  
-        .containerimage{
-          position: relative;
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          width: 100%;
-          flex-wrap: wrap;
-        }
-  
-        .imagecarrousel{
-          position: relative;
-          width: 50%;
-          height: auto;
-        }
-       
-        .imagen{
-          width:100%;
-          height: 300px;
-          }
-  
-      }
-  
-  
-  
+    }
 
+    .imagecarrousel {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+
+    .tituloCarrousel {
+      font-size: 20px;
+    }
+
+     .tituloPopular {
+      font-size: 22px;
+    }
+
+
+  }
+
+
+  @media (min-width: 391px) and (max-width: 768px) {
+
+    .swiper {
+      display: flex;
+      flex-direction: row;
+      height: auto;
+      flex-wrap: wrap;
+    }
+
+    .swiper-initialized .swiper-vertical .mySwiper {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .swipe-wrapper {
+      height: auto;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+
+    .containerimage {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .imagecarrousel {
+      position: relative;
+      width: 50%;
+      height: auto;
+    }
+
+    .imagen {
+      width: 100%;
+      height: 300px;
+    }
+
+    .tituloCarrousel {
+      font-size: 20px;
+    }
+    .tituloPopular {
+      font-size: 28px;
+    }
+  }

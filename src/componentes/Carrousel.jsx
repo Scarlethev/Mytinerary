@@ -27,7 +27,7 @@ export default function App() {
   return (
     <>
 
-    <h1 className="tituloPopular">Popular MYtineraries</h1>
+    <h1 className="tituloPopular">POPULAR MYTINERARY</h1>
 
       <Swiper
         spaceBetween={30}
@@ -47,19 +47,19 @@ export default function App() {
           <div className="containerimage">
             <div className="imagecarrousel">
               <img className ="imagen" src={imagecanada}/>
-              <h3 className="tituloCarrousel">Toronto</h3>
+              <h1 className="tituloCarrousel">Toronto</h1>
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imageeuropa} />
-            <h3 className="tituloCarrousel">Paris</h3>
+            <h1 className="tituloCarrousel">Paris</h1>
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imagelosroques} />
-            <h3 className="tituloCarrousel">Bolivar</h3>
+            <h1 className="tituloCarrousel">Bolivar</h1>
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imagesantorini} />
-            <h3 className="tituloCarrousel">Santorini</h3>
+            <h1 className="tituloCarrousel">Santorini</h1>
             </div>
           </div>
         </SwiperSlide>
@@ -68,19 +68,19 @@ export default function App() {
           <div className="containerimage">
           <div className="imagecarrousel">
             <img className="imagen" src={imagecabohaitiano}/>
-            <h3 className="tituloCarrousel">Cap-Haitien</h3>
+            <h1 className="tituloCarrousel">Cap-Haitien</h1>
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imagedubai} />
-            <h3 className="tituloCarrousel">Dubaï</h3>
+            <h1 className="tituloCarrousel">Dubaï</h1>
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imagesidney} />
-            <h3 className="tituloCarrousel">Sydney</h3>
+            <h1 className="tituloCarrousel">Sydney</h1>
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imagemurallachina} />
-            <h3 className="tituloCarrousel">Bohai Sea</h3>
+            <h1 className="tituloCarrousel">Bohai Sea</h1>
             </div>
           </div>
         </SwiperSlide>
@@ -89,19 +89,19 @@ export default function App() {
           <div className="containerimage">
           <div className="imagecarrousel">
             <img className="imagen" src={imageushuaia} />
-            <h3 className="tituloCarrousel">Ushuaia</h3>
+            <h1 className="tituloCarrousel">Ushuaia</h1>
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imagesaltoangel} />
-            <h3 className="tituloCarrousel">National Park Canaima</h3>
+            <h1 className="tituloCarrousel">National Park Canaima</h1>
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imageiguazu} />
-            <h3 className="tituloCarrousel">Puerto Iguazú</h3>
+            <h1 className="tituloCarrousel">Puerto Iguazú</h1>
             </div>
             <div className="imagecarrousel">
             <img className="imagen" src={imagenewyork} />
-            <h3 className="tituloCarrousel">New York</h3>
+            <h1 className="tituloCarrousel">New York</h1>
             </div>
 
           </div>

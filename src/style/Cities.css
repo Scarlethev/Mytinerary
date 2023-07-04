@@ -32,10 +32,13 @@
     -moz-transform: scale(1.1) ; */
 }
 
-.iconosCard{
-
+.progress{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 300px;
 }
-
 
 
 @media screen and (max-width: 440px){

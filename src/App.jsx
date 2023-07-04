@@ -6,6 +6,7 @@ import Footer from './componentes/Footer'
 import NavBar from './componentes/NavBar';
 import Cities from './componentes/Cities';
 import Home from "./componentes/Home"
+import Details from "./componentes/Details"
 
 import './style/Carrousel.css';
 import { Routes, Route } from "react-router-dom"
@@ -23,6 +24,7 @@ function App() {
         <Route path="/Home" element={<Home/>}></Route>
         <Route path="/Cities" element={<Cities/>}></Route>
         <Route path="/User" element={<User/>}></Route>
+        <Route path="/Details" element={<Details/>}></Route>
         </Routes>
       <Footer />
       </div>

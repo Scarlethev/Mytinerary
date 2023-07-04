@@ -1,7 +1,11 @@
+import enConstruction from "../images/EnConstruccion.jpg"
+import "../style/Cities.css"
 
 function Details(){
     return(
-        <h1>This page details</h1>
+        <div className="textoEnConstruccion">
+        <img src={enConstruction} alt="Imagen de un obrero" />
+        </div>
     )
 }
 

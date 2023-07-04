@@ -91,16 +91,21 @@ function ResponsiveAppBar() {
               {NavLinks.map((page,index) => (
                 <MenuItem key={index} onClick={handleCloseNavMenu}>
                   <LinkRouter to={page.path}>
-                  <Typography textAlign="center" color="black">{page.name}</Typography>
+                  <div className="NavLi">
+                  <Typography textAlign="center">
+                    {page.name}
+                    </Typography>
+                    </div>
                   </LinkRouter>
                 </MenuItem>
+             
               ))}
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
           <LinkRouter to={"/Home"}>
                 <div className="logoYtext">
-                     <img className="Logo" alt= "Logo de empresa"src={Logo}/>
+                     <img className="Logo" alt="Logo de empresa"src={Logo}/>
                          <h3 className="MyItinerary">MyTinerary</h3>
                     </div>
                 </LinkRouter>
@@ -108,13 +113,16 @@ function ResponsiveAppBar() {
                   
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {NavLinks.map((page,index) => (
+              
               <LinkRouter to={page.path}>
               <Button
                 key={index}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'black', display: 'block', size:"20px" }}
               >
+                 <div className="NavLi">
                 {page.name}
+                </div>
               </Button>
               </LinkRouter>
             ))}
@@ -122,8 +130,10 @@ function ResponsiveAppBar() {
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0}}>
+          
+                <Avatar className="User" alt="Remy Sharp" src="/static/images/avatar/2.jpg"/>
+          
               </IconButton>
             </Tooltip>
             <Menu
@@ -144,7 +154,9 @@ function ResponsiveAppBar() {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                  <div className="NavLi">
+                  <Typography textAlign="center" color="black" >{setting}</Typography>
+                  </div>
                 </MenuItem>
               ))}
             </Menu>

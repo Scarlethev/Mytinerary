@@ -9,8 +9,12 @@
 }
 
 .search h1{
+    display:flex;
     color:rgba(234, 240, 246, 0.8);
     justify-content: center;
+    align-items: center;
+    width:90%;
+    margin:0;
 }
 
 .search .input{

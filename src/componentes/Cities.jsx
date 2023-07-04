@@ -31,7 +31,7 @@ function Cities() {
   return (
     <>
       <div className="search">
-        <h1>CITIES</h1>
+        <h1></h1>
         <input className="input" type="text" placeholder="Search..." name="myInput" />
       </div>
       {cities.length > 0 ?
@@ -69,7 +69,7 @@ function Cities() {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                <LinkRouter to={"/Home"}>
+                <LinkRouter to={"/Details"}>
                   <Button size="small">Learn More</Button>
                   </LinkRouter>
                 </CardActions>
@@ -78,7 +78,7 @@ function Cities() {
           )}
         </div> :
         <Box sx={{ display: 'flex' }}>
-        <CircularProgress />
+          <div className="progress"><CircularProgress /></div>
       </Box>
       }
     </>

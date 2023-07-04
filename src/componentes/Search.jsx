@@ -36,7 +36,7 @@ if(!search){
 
      return (
         <div className="search">
-              <h1>CITIES</h1> 
+              <h1></h1> 
 
               <input value ={search} onChange={searcher} type="search" name="input" id="input" />
     
