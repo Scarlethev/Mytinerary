@@ -57,15 +57,12 @@
   .callAction{
     display:flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color:#f4f5f3;
-    margin-left:80%;
-    width:300px;
-    max-width: 300px;
-    border-radius: 10px;
-    height: 10%;
+    justify-content:flex-end;
+    width:90%;
     z-index: 1;
+    margin-right: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
   }
 
   .noneDecoration{
@@ -73,10 +70,18 @@
   }
 
   .noneDecoration h1{
+   background-color:#fff;
    color:rgb(51, 112, 226);
+   border-radius: 10px;
+   margin:0;
+   height: 50px;
+   padding: 10px;
   }
   
 @media screen and (max-width: 390px){
+  .home{
+  height: auto;
+  }
   .slogan .tituloUno{
     text-align: center;
     flex-wrap: wrap;
@@ -92,35 +97,40 @@
 }
 
 .callAction{
-  margin-left:40%;
-  width:300px;
-  max-width: 200px;
-  border-radius: 10px;
-  height: 10%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   font-size: 10px;
   color: #fff;
 }
 }
 
 @media (min-width: 391px) and (max-width: 768px){
+.home{
+  height: auto;
+}
+
   .slogan.tituloUno{
   text-align: center;
   flex-wrap: wrap;
   width:100%;
-  font-size:50px;
+  font-size:1.2rem;
+  height: auto;
 }
 .slogan .tituloDos{
   text-align: center;
   flex-wrap: wrap;
   width:100%;
-  font-size:25px;
+  font-size:40px;
 }
 .callAction{
-  margin-left:60%;
-  width:300px;
-  max-width: 200px;
-  border-radius: 10px;
-  height: 10%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   font-size: 15px;
   color: #fff;
 }
