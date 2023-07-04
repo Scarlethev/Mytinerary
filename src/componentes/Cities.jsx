@@ -14,7 +14,7 @@ function Cities() {
   const [cities, setCities] = useState([])
   let citiesDb
   async function getData() {
-    citiesDb = await axios.get("http://localhost:4000/Api/cities")
+    citiesDb = await axios.get("https://scarleth-api-cities-crud.onrender.com/Api/cities")
     setCities(citiesDb.data.response.cities)
     console.log(cities)
   }
