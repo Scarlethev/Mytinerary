@@ -2,6 +2,8 @@ import "../style/Cities.css"
 import "../style/Search.css"
 import { useEffect, useState } from "react"
 import axios from "axios"
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -9,6 +11,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import {Link as LinkRouter } from 'react-router-dom';
+import { IconName } from "react-icons/fc";
+import { FaBeer, FaLanguage} from "react-icons/fa";
 import * as React from 'react'
 
 
@@ -34,7 +38,7 @@ function Cities() {
         <div className="cards">
           {cities.map(city =>
             <div className="card">
-              <Card sx={{ maxWidth: 450 }}>
+              <Card sx={{ maxWidth: 450, minWidth: 150 }}>
                 <CardMedia
                   component="img"
                   alt={city.name}
@@ -47,13 +51,16 @@ function Cities() {
                     {city.name}
                   </Typography>
                   <Typography variant="body" component="div">
+                    
                     {city.country}
                   </Typography>
                   <div className="iconosCard">
                     <Typography variant="body" component="div">
+                      <FaBeer />
                       {city.currency}
                     </Typography>
                     <Typography variant="body" component="div">
+                    <FaLanguage/>
                       {city.language}
                     </Typography>
                   </div>
@@ -70,7 +77,9 @@ function Cities() {
             </div>
           )}
         </div> :
-        <h1>"Loading"</h1>
+        <Box sx={{ display: 'flex' }}>
+        <CircularProgress />
+      </Box>
       }
     </>
   )
