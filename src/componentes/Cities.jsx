@@ -15,7 +15,6 @@ import { IconName } from "react-icons/fc";
 import { FaBeer, FaLanguage} from "react-icons/fa";
 import * as React from 'react'
 
-
 function Cities() {
   const [cities, setCities] = useState([])
   let citiesDb
