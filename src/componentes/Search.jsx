@@ -1,24 +1,32 @@
 import React,{useState,useEffect} from "react"
 import "../style/Search.css"
-  
-const Search =() =>{
-//setear los hooks useState
-const [cities, setCities] = useState ([])
-const [search, setSearch] =useState ("")
+
+function Search(){
+    const [cities, setCities] = useState ([])
+    const [search, setSearch] =useState ("")
+
+    const searcher = (e) => {
+       console.log("Busqueda" + e.target.value)
+    }
+
+
+//     const Search =() =>{
+// //setear los hooks useState
+
 
 //function para traer datos de la Api
-const URL = '' //link de la ruta
-const showCities = async()=> {
-const response = await fetch(URL)
-const dataCities = await reponse .json()
+// const URL = '' //link de la ruta
+// const showCities = async()=> {
+// const response = await fetch(URL)
+// const dataCities = await reponse.json()
 
-console.log(dataCities)
-setCities(dataCities)
-}
+// console.log(dataCities)
+// setCities(dataCities)
+// }
 // filtrado  search
-const searcher = (e) => {
-    setSearch(e.target.value)
-}
+
+
+
 let results = []
 if(!search){
     results = cities
@@ -33,17 +41,14 @@ if(!search){
 // showCities()
 // },[])
 
-
      return (
         <div className="search">
               <h1></h1> 
-
-              <input value ={search} onChange={searcher} type="search" name="input" id="input" />
-    
-     
+              
         </div>
      )
  }
+
 
  export default Search
 

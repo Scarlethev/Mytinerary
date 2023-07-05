@@ -28,12 +28,32 @@ function Cities() {
     getData()
   }, [])
 
+
+  const [search, setSearch] =useState ("")
+  const [city, setCity] = useState([])
+
+  const searcher = (e) => {
+    setSearch(e.target.value)
+    filter(e.target.value)
+  }
+
+const filter=(searched) => {
+  var resultadoSearch= cities.filter((city)=>{
+    if(city.name.toLowerCase().includes(searched.toLowerCase()))
+  {
+    return city;
+  }
+  });
+
+   setCity(resultadoSearch);
+}
+
+
+
+
   return (
     <>
-      <div className="search">
-        <h1></h1>
-        <input className="input" type="text" placeholder="Search..." name="myInput" />
-      </div>
+     <input value ={search} onChange={searcher} type="search" name="input" id="input" placeholder="Busqueda por pais" />
       {cities.length > 0 ?
         <div className="cards">
           {cities.map(city =>
@@ -51,7 +71,6 @@ function Cities() {
                     {city.name}
                   </Typography>
                   <Typography variant="body" component="div">
-                    
                     {city.country}
                   </Typography>
                   <div className="iconosCard">
@@ -69,7 +88,7 @@ function Cities() {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                <LinkRouter to={"/Details"}>
+                <LinkRouter to={"/Details/" + city._id}>
                   <Button size="small">Learn More</Button>
                   </LinkRouter>
                 </CardActions>
