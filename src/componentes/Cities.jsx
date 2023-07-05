@@ -105,5 +105,4 @@ const filter=(searched) => {
 }
 
 
-
 export default Cities
