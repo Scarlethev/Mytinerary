@@ -16,43 +16,47 @@ import {Link as LinkRouter } from 'react-router-dom';
 import * as React from 'react'
 
 function Cities() {
+  const [search, setSearch] =useState ("")
+  const [citiesToFilter, setCitiesToFilter] = useState([])
   const [cities, setCities] = useState([])
+ 
   let citiesDb
   async function getData() {
     citiesDb = await axios.get("https://scarleth-api-cities-crud.onrender.com/Api/cities")
     setCities(citiesDb.data.response.cities)
+    setCitiesToFilter(citiesDb.data.response.cities)
     console.log(cities)
   }
   useEffect(() => {
     getData()
   }, [])
 
-
-  const [search, setSearch] =useState ("")
-  const [city, setCity] = useState([])
+ 
 
   const searcher = (e) => {
     setSearch(e.target.value)
     filter(e.target.value)
   }
 
+ 
+
 const filter=(searched) => {
-  var resultadoSearch= cities.filter((city)=>{
+  var resultadoSearch= citiesToFilter.filter((city)=>{
     if(city.name.toLowerCase().includes(searched.toLowerCase()))
   {
     return city;
   }
   });
 
-   setCity(resultadoSearch);
+  setCities(resultadoSearch);
 }
-
-
 
 
   return (
     <>
-     <input value ={search} onChange={searcher} type="search" name="input" id="input" placeholder="Busqueda por pais" />
+    <div className="search">
+     <input value ={search} onChange={searcher} type="search" name="input" id="input" placeholder="Busqueda por pais" />   
+     </div>
       {cities.length > 0 ?
         <div className="cards">
           {cities.map(city =>
@@ -83,12 +87,12 @@ const filter=(searched) => {
                     </Typography>
                   </div>
                   <Typography variant="body2" color="text.secondary">
-                    {city.description}
+                    {/* {city.description} */}
                   </Typography>
                 </CardContent>
                 <CardActions>
                 <LinkRouter to={"/Details/" + city._id}>
-                  <Button size="small">Learn More</Button>
+                  <Button size="small">Read More</Button>
                   </LinkRouter>
                 </CardActions>
               </Card>
