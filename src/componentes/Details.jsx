@@ -1,4 +1,4 @@
-import enConstruction from "../images/EnConstruccion.jpg"
+ import enConstruction from "../images/EnConstruccion.jpg"
 import { useEffect, useState } from "react"
 import { Link as LinkRouter } from 'react-router-dom';
 import axios from "axios"
@@ -30,7 +30,7 @@ function Details() {
   }
   useEffect(() => {
     getData()
-  }, [])
+  }, )
 
   return (
     <div>
