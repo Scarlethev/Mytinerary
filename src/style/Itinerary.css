@@ -1,0 +1,28 @@
+.countainerItinerary{
+    min-width:100%;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.titleItinerary{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    height: 50px;
+}
+
+.descriptionItinerary{
+    display:flex;
+    flex-direction: colum;
+    height: auto;
+
+}
+
+.paragraphs{
+    text-align: justify;
+}
+

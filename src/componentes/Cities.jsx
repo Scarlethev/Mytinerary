@@ -11,8 +11,9 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import {Link as LinkRouter } from 'react-router-dom';
-//import { IconName } from "react-icons/fc";
-//import { FaBeer, FaLanguage} from "react-icons/fa";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { IconName } from "react-icons/fc";
+// import { FaBeer, FaLanguage} from "react-icons/fa";
 import * as React from 'react'
 
 function Cities() {
@@ -54,14 +55,14 @@ const filter=(searched) => {
 
   return (
     <>
-    <div className="search">
-     <input value ={search} onChange={searcher} type="search" name="input" id="input" placeholder="Busqueda por pais" />   
+      <div className="containerSearch">
+     <input  className="search" value ={search} onChange={searcher} type="search" name="input" id="input" placeholder="Find your city..." />   
      </div>
       {cities.length > 0 ?
         <div className="cards">
           {cities.map(city =>
             <div className="card">
-              <Card sx={{ maxWidth: 450, minWidth: 150 }}>
+              <Card sx={{ maxWidth: 400, minWidth: 150 }}>
                 <CardMedia
                   component="img"
                   alt={city.name}
@@ -73,35 +74,33 @@ const filter=(searched) => {
                   <Typography gutterBottom variant="h5" component="div">
                     {city.name}
                   </Typography>
-                  <Typography variant="body" component="div">
+                  <Typography variant="h6" component="div" ClassName="itemsbodycard">
                     {city.country}
                   </Typography>
-                  <div className="iconosCard">
-                    <Typography variant="body" component="div">
-                      {/* <FaBeer /> */}
+                  <div className="cardContent">
+                    <Typography variant="body"  ClassName="itemsbodycard">
                       {city.currency}
                     </Typography>
-                    <Typography variant="body" component="div">
-                    {/* <FaLanguage/> */}
+                    <Typography variant="body" ClassName="itemsbodycard">
+
                       {city.language}
                     </Typography>
                   </div>
-                  <Typography variant="body2" color="text.secondary">
-                    {/* {city.description} */}
-                  </Typography>
                 </CardContent>
-                <CardActions>
+                <CardActions className="readMore">
                 <LinkRouter to={"/Details/" + city._id}>
-                  <Button size="small">Read More</Button>
+                  <Button size="18">Read More</Button>
                   </LinkRouter>
                 </CardActions>
               </Card>
             </div>
           )}
         </div> :
+        <div>
         <Box sx={{ display: 'flex' }}>
           <div className="progress"><CircularProgress /></div>
       </Box>
+      </div>
       }
     </>
   )

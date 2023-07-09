@@ -1,6 +1,7 @@
-import enConstruction from "../images/EnConstruccion.jpg"
 import { useEffect, useState } from "react"
 import { Link as LinkRouter } from 'react-router-dom';
+import Box from '@mui/material/Box';
+import CircularProgress from '@mui/material/CircularProgress';
 import axios from "axios"
 import "../style/Cities.css"
 import "../style/Details.css"
@@ -38,29 +39,25 @@ function Details() {
         <div className="containerDetails">
           <MDBCard style={{ width: '1000px' }}>
             <MDBRow className='g-0 containerDetails'>
-              <MDBCol md='8'>
+              <MDBCol md='8' sm="12">
                 <MDBCardImage className="imagenDetails" src={city.image} alt='...' />
               </MDBCol>
-              <MDBCol md='4'>
+              <MDBCol md='4' sm="12">
                 <MDBCardBody className="textDetails">
                   <MDBCardTitle><strong>{city.name}</strong></MDBCardTitle>
                   <MDBCardText className="textDetails">
                     {city.description}
                   </MDBCardText>
                   <MDBCardText>
-                  <LinkRouter to={"/Itinerary"}>
-                      <MDBBtn className='me-1'>
+
+                  <LinkRouter to={"/Itinerary/"}>
+                      <MDBBtn>
                        Itinerary One
                       </MDBBtn>
                       </LinkRouter>
                       <LinkRouter to={"/Itinerary"}>
-                      <MDBBtn className='me-1' color='secondary'>
+                      <MDBBtn>
                       Itinerary Two
-                      </MDBBtn>
-                      </LinkRouter>
-                      <LinkRouter to={"/Itinerary"}>
-                      <MDBBtn className='mx-2' color='tertiary' rippleColor='light'>
-                      Itinerary Three
                       </MDBBtn>
                       </LinkRouter>
                 </MDBCardText>
@@ -70,9 +67,11 @@ function Details() {
         </MDBCard>
 
     </div> :
-  <h1 className="nameCountry">
-    "Error"
-  </h1>
+      <div>
+        <Box sx={{ display: 'flex' }}>
+          <div className="progress"><CircularProgress /></div>
+      </Box>
+      </div>
 }
     </div >
    

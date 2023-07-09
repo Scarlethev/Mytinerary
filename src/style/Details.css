@@ -2,9 +2,27 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    width:auto;
     height: auto;
     margin: 50px;
+    flex-wrap: wrap;
+}
 
+.card{
+    display: flex;
+    position: relative;
+}
+
+.card > .imagenDetails{
+    display: flex;
+    position: relative;
+    min-width: 300px;
+    max-width: 550px;
+    width: auto;
+}
+
+.textDetails{
+    display: flex;
+    position: relative;
+    flex-direction: column;
 }
 

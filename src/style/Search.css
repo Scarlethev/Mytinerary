@@ -1,12 +1,23 @@
-.search{
-    height: 150px;
+.containerSearch{
+    height: 80px;
     background: #268aeda3;
     display: flex;;
-    justify-content:space-between;
+    justify-content:flex-end;
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
 }
+
+.search{
+    height: 35px;
+    display: flex;;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
 
 .search h1{
     display:flex;

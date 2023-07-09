@@ -21,7 +21,7 @@
 
 .card{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    width:400px;
+    width:300px;
 }
 
 .card :hover{
@@ -32,12 +32,35 @@
     -moz-transform: scale(1.1) ; */
 }
 
+.cardContent{
+    position: relative;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    column-gap: 20px;
+    row-gap: 20px;
+    font-size: 20px;
+    min-height: 50px;
+}
+
+.itemsbodycard{
+    display:flex;
+    font-size: 25px;
+}
+
 .progress{
     display:flex;
     justify-content: center;
     align-items: center;
     width:100%;
     height: 300px;
+}
+
+.readMore{
+    display: flex;
+    justify-content: flex-end;
 }
 
 
