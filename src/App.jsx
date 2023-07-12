@@ -14,8 +14,7 @@ import { Routes, Route } from "react-router-dom"
 
 
 function App() {
-
-  //PARTE LOGICA//
+  
   return (
     <div className="App">
       <NavBar/>

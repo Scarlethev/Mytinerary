@@ -1,24 +1,14 @@
 import React, { useRef, useState } from "react";
-
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "../style/Carrousel.css";
 import imageeuropa from "../images/europa 1.jpg"
-// import imagelosroques from "../images/Los-Roques-1.jpg"
-// import imagesantorini from "../images/santorini.jpg"
-// import imagecabohaitiano from "../images/cabohaitiano.jpg"
 import imagedubai from "../images/dubai.jpg"
 import imagesidney from "../images/sidney.jpeg"
-// import imageushuaia from "../images/ushuaia.jpg"
-// import imagesaltoangel from "../images/salto angel.jpeg"
-// import imageiguazu from "../images/iguazu.jpeg"
 import imagenewyork from "../images/new york.jpeg"
-// import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
 
 export default function App() {
