@@ -20,7 +20,7 @@
     text-decoration: none;
     margin-right: 30px;
     background:rgb(51, 112, 226);
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .NavBar a{
@@ -30,7 +30,7 @@
 
 .NavLi{
     position: relative;
-    font-size: 20px;
+    font-size: 16px;
     color: #fff;
     font-weight: 400;
 
