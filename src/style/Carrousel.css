@@ -43,8 +43,11 @@
   .tituloCarrouselh1{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:end;
     row-gap: 20px;
+    height: 150px;
+    background-color: #fff;
+    font-family: sans-serif;
   }
 
   .tituloPopularOne {
@@ -54,9 +57,9 @@
     width: 60%;
     padding-top: 30px;
     font-size: 55px;
-    color:rgba(48, 110, 187, 0.844);
+    color:#fff;
     margin: 0;
-    text-shadow: -3px 0px 7px rgba(41, 41, 242, 0.79); 
+    text-shadow: -5px 0px 7px rgba(60, 60, 223, 0.882); 
   }
   
   .tituloPopularDos {
@@ -65,7 +68,7 @@
     align-items: center;
     width:100%;
     font-size: 55px;
-    color:rgba(19, 49, 85, 0.844);
+    color:#fff;
     text-shadow: -3px 0px 7px rgba(41, 41, 242, 0.79); 
     margin-top: 10px;
   }

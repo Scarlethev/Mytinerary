@@ -7,6 +7,7 @@ import axios from "axios"
 import "../style/Cities.css"
 import "../style/Details.css"
 import "../style/Search.css"
+import "../style/Itinerary.css"
 import { useParams } from "react-router-dom"
 import {
   MDBCard,
@@ -20,8 +21,17 @@ import {
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { MDBBtn } from 'mdb-react-ui-kit';
+import Itinerary from "./Itinerary";
 
 function Details() {
+
+  const [itinerary, setItinerary]= useState(false)
+
+  const onClick=()=>{
+    setItinerary(!itinerary)
+  }
+
+
   const { id } = useParams()
   const [city, setCity] = useState()
   let citiesDb
@@ -35,13 +45,19 @@ function Details() {
   }, )
 
   return (
+    <>
     <div>
       {city ?
         <div className="containerDetails">
-          <MDBCard style={{ width: '1000px' }}>
+          <MDBCard style={{ width: '980px' }}>
             <MDBRow className='g-0 containerDetails'>
               <MDBCol md='8' sm="12">
-                <MDBCardImage className="imagenDetails" src={city.image} alt='...' />
+                <MDBCardImage className="imagenDetails" src={city.image}
+                       component="img"
+                       alt={city.name}
+                       height="auto"
+                       width="600px"
+                       image={city.image} />
               </MDBCol>
               <MDBCol md='4' sm="12">
                 <MDBCardBody className="textDetails">
@@ -49,15 +65,15 @@ function Details() {
                   <MDBCardText className="textDetails">
                     {city.description}
                   </MDBCardText>
-                  <MDBCardText>
+                  <MDBCardText className="countainerButtons">
 
-                  <LinkRouter to={"/Itinerary/"}>
-                      <MDBBtn>
+                  <LinkRouter>
+                      <MDBBtn onClick={onClick} className="buttonItinerary">
                        Itinerary One
                       </MDBBtn>
                       </LinkRouter>
-                      <LinkRouter to={"/Itinerary"}>
-                      <MDBBtn>
+                      <LinkRouter>
+                      <MDBBtn onClick={onClick} className="buttonItinerary">
                       Itinerary Two
                       </MDBBtn>
                       </LinkRouter>
@@ -75,6 +91,11 @@ function Details() {
       </div>
 }
     </div >
+     
+    <div className={itinerary ? "display" : "none"}>
+    <Itinerary/>
+    </div>
+    </>
    
   )
 }

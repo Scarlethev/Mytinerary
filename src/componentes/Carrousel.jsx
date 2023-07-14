@@ -16,7 +16,7 @@ export default function App() {
   return (
     <>
     <div className="tituloCarrouselh1">
-    <h1 className="tituloPopularOne"><strong>POPULAR</strong>MYTINERARY</h1>
+    <h1 className="tituloPopularOne"><strong>Popular MYTINERARY</strong></h1>
     </div>
       <Swiper
         spaceBetween={30}

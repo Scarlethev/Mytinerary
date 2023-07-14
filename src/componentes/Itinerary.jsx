@@ -44,24 +44,11 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 
 function Itinerary() {
 
-   const [expanded, setExpanded] = React.useState(false);
+   const [expanded, setExpanded] = useState(false);
 
    const handleExpandClick = () => {
       setExpanded(!expanded);
    };
-
-   //       const { id } = useParams()
-   //       const [itinerary, setItinerary] = useState()
-   //       let itineraryDb
-   //       async function getData() {
-   //          itineraryDb = await axios.get("" + id)
-   //         setItinerary(itineraryDb.data.response.city)
-   //         console.log(itineraryDb)
-   //       }
-   //       useEffect(() => {
-   //         getData()
-   //       }, [])
-
 
    return (
       <>
@@ -116,7 +103,7 @@ function Itinerary() {
                </CardActions>
                <Collapse in={expanded} timeout="auto" unmountOnExit    sx={{ maxWidth: 700 }}>
                   <CardContent>
-                     <Typography paragraph><strong>WALKING TOUR THROUGH THE CENTER OF PARIS</strong></Typography>
+                     <Typography paragraph text="justify"><strong>WALKING TOUR THROUGH THE CENTER OF PARIS</strong></Typography>
                      <Typography paragraph>
                         <div className="paragraphs">
                         We suggest visiting the emblematic Eiffel Tower. You can photograph yourself from below, walk through the Champ de Mars, or you can choose to climb the monument to see the views from the tower.

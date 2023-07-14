@@ -26,3 +26,13 @@
     text-align: justify;
 }
 
+
+.display{
+    display: flex;
+
+}
+
+.none{
+    display: none;
+}
+

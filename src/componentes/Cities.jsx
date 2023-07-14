@@ -61,7 +61,7 @@ const filter=(searched) => {
       {cities.length > 0 ?
         <div className="cards">
           {cities.map(city =>
-            <div className="card">
+            <div className="cardCities">
               <Card sx={{ maxWidth: 400, minWidth: 150 }}>
                 <CardMedia
                   component="img"
@@ -74,18 +74,17 @@ const filter=(searched) => {
                   <Typography gutterBottom variant="h5" component="div">
                     {city.name}
                   </Typography>
-                  <Typography variant="h6" component="div" ClassName="itemsbodycard">
-                    {city.country}
+                  <Typography variant="14px" component="div" ClassName="itemsbodycard">
+                    Country : {city.country}
                   </Typography>
-                  <div className="cardContent">
-                    <Typography variant="body"  ClassName="itemsbodycard">
-                      {city.currency}
+                  {/* <div className="cardContent"> */}
+                    <Typography variant="14px" component="div" ClassName="itemsbodycard">
+                    Currency : {city.currency}
+                     </Typography>
+                    <Typography variant="14px" component="div" ClassName="itemsbodycard">
+                      Language : {city.language}
                     </Typography>
-                    <Typography variant="body" ClassName="itemsbodycard">
-
-                      {city.language}
-                    </Typography>
-                  </div>
+                  {/* </div> */}
                 </CardContent>
                 <CardActions className="readMore">
                 <LinkRouter to={"/Details/" + city._id}>
@@ -96,11 +95,9 @@ const filter=(searched) => {
             </div>
           )}
         </div> :
-        <div>
         <Box sx={{ display: 'flex' }}>
           <div className="progress"><CircularProgress /></div>
       </Box>
-      </div>
       }
     </>
   )
