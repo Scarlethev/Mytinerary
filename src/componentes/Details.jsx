@@ -41,7 +41,7 @@ function Details() {
     console.log(citiesDb)
   }
   useEffect(() => {
-    getData()
+    //  getData()
   }, )
 
   return (

@@ -24,12 +24,13 @@ function Cities() {
   let citiesDb
   async function getData() {
     citiesDb = await axios.get("https://scarleth-api-cities-crud.onrender.com/Api/cities")
+    console.log(citiesDb)
     setCities(citiesDb.data.response.cities)
     setCitiesToFilter(citiesDb.data.response.cities)
     console.log(cities)
   }
   useEffect(() => {
-    getData()
+     getData()
   }, [])
 
  

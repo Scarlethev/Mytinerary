@@ -44,6 +44,22 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 
 function Itinerary() {
 
+      const [itineraries, setItineraries] = useState([])
+     
+      let ItinerariesDb
+      
+      async function getData() {
+      ItinerariesDb= await axios.get("https://vastyaint-api-itinerary-crud.onrender.com/api/itinerary")
+      console.log("CRUD ITINERARY" + ItinerariesDb)
+       
+        setItineraries(ItinerariesDb.data.response.itineray)
+      
+       console.log(itineraries)
+      }
+      useEffect(() => {
+        getData()
+      }, [])
+
    const [expanded, setExpanded] = useState(false);
 
    const handleExpandClick = () => {
