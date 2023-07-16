@@ -13,7 +13,7 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    height: auto;
+    min-height: auto;
     column-gap: 20px;
     row-gap: 40px;
     column-gap: 40px;
@@ -58,7 +58,7 @@
     justify-content: center;
     align-items: center;
     width:100%;
-    height: auto;
+    min-height: 600px;
 }
 
 .readMore{

@@ -8,6 +8,7 @@ import "../style/Cities.css"
 import "../style/Details.css"
 import "../style/Search.css"
 import "../style/Itinerary.css"
+import {BsFillReplyAllFill} from "react-icons/bs";
 import { useParams } from "react-router-dom"
 import {
   MDBCard,
@@ -26,9 +27,11 @@ import Itinerary from "./Itinerary";
 function Details() {
 
   const [itinerary, setItinerary]= useState(false)
+  const [classButton, setClassButton]= useState(false);
 
   const onClick=()=>{
     setItinerary(!itinerary)
+    setClassButton(!classButton);
   }
 
 
@@ -38,16 +41,19 @@ function Details() {
   async function getData() {
     citiesDb = await axios.get("https://scarleth-api-cities-crud.onrender.com/Api/cities/" + id)
     setCity(citiesDb.data.response.city)
-    console.log(citiesDb)
+    
   }
   useEffect(() => {
-    //  getData()
+    getData()
   }, )
 
   return (
     <>
     <div>
-      {city ?
+    <LinkRouter to={"/Cities"}>
+       <BsFillReplyAllFill className="backButton"/>
+      </LinkRouter>
+       {city ?
         <div className="containerDetails">
           <MDBCard style={{ width: '980px' }}>
             <MDBRow className='g-0 containerDetails'>
@@ -68,7 +74,7 @@ function Details() {
                   <MDBCardText className="countainerButtons">
 
                   <LinkRouter>
-                      <MDBBtn onClick={onClick} className="buttonItinerary">
+                      <MDBBtn onClick={onClick} className={ `buttonItinerary ${onClick} ? changeButtonItinerary : none `}>
                        Itinerary One
                       </MDBBtn>
                       </LinkRouter>

@@ -2,10 +2,20 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    min-height: 600px;
     height: auto;
     width:auto;
-    margin: 50px;
     flex-wrap: wrap;
+}
+
+.backButton{
+    display: flex;
+    align-items: center ;
+    justify-content: flex-end;
+    width:80px;
+    height: 150px;
+    padding-left: 20px;
+    margin-left: 20px;
 }
 
 .cardDetails{
@@ -49,6 +59,10 @@
 .buttonItinerary{
     display:flex;
     width:120px;
+}
+
+.changeButtonItinerary{
+    background-color: #525230;
 }
 
 

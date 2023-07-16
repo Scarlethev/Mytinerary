@@ -11,9 +11,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import {Link as LinkRouter } from 'react-router-dom';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { IconName } from "react-icons/fc";
-// import { FaBeer, FaLanguage} from "react-icons/fa";
+import { BsGeoAltFill, BsCashStack, BsTranslate } from "react-icons/bs";
+import { FaSearch} from "react-icons/fa";
 import * as React from 'react'
 
 function Cities() {
@@ -23,11 +22,9 @@ function Cities() {
  
   let citiesDb
   async function getData() {
-    citiesDb = await axios.get("https://scarleth-api-cities-crud.onrender.com/Api/cities")
-    console.log(citiesDb)
+    citiesDb= await axios.get("https://scarleth-api-cities-crud.onrender.com/Api/cities")
     setCities(citiesDb.data.response.cities)
     setCitiesToFilter(citiesDb.data.response.cities)
-    console.log(cities)
   }
   useEffect(() => {
      getData()
@@ -41,7 +38,6 @@ function Cities() {
   }
 
  
-
 const filter=(searched) => {
   var resultadoSearch= citiesToFilter.filter((city)=>{
     if(city.name.toLowerCase().includes(searched.toLowerCase()))
@@ -58,11 +54,12 @@ const filter=(searched) => {
     <>
       <div className="containerSearch">
      <input  className="search" value ={search} onChange={searcher} type="search" name="input" id="input" placeholder="Find your city..." />   
+     <FaSearch className="iconSearch"/>
      </div>
       {cities.length > 0 ?
         <div className="cards">
-          {cities.map(city =>
-            <div className="cardCities">
+          {cities.map((city,index) =>
+            <div  key={index} className="cardCities">
               <Card sx={{ maxWidth: 400, minWidth: 150 }}>
                 <CardMedia
                   component="img"
@@ -75,17 +72,15 @@ const filter=(searched) => {
                   <Typography gutterBottom variant="h5" component="div">
                     {city.name}
                   </Typography>
-                  <Typography variant="14px" component="div" ClassName="itemsbodycard">
-                    Country : {city.country}
+                  <Typography variant="16px" component="div" ClassName="itemsbodycard">
+                    <BsGeoAltFill/>: {city.country}
                   </Typography>
-                  {/* <div className="cardContent"> */}
                     <Typography variant="14px" component="div" ClassName="itemsbodycard">
-                    Currency : {city.currency}
+                    <BsCashStack/>: {city.currency}
                      </Typography>
                     <Typography variant="14px" component="div" ClassName="itemsbodycard">
-                      Language : {city.language}
+                    <BsTranslate/> : {city.language}
                     </Typography>
-                  {/* </div> */}
                 </CardContent>
                 <CardActions className="readMore">
                 <LinkRouter to={"/Details/" + city._id}>

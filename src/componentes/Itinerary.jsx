@@ -21,6 +21,8 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 import ImageParis from "../images/ItineraryParis.jpeg"
 import usuarioOne from "../images/usuarioParisOne.jpeg"
 
@@ -44,23 +46,28 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 
 function Itinerary() {
 
-      const [itineraries, setItineraries] = useState([])
-     
-      let ItinerariesDb
-      
-      async function getData() {
-      ItinerariesDb= await axios.get("https://vastyaint-api-itinerary-crud.onrender.com/api/itinerary")
+   // const { id } = useParams()
+   const [itineraries, setItineraries] = useState([])
+
+   let ItinerariesDb
+
+   // const {id} =useParams()
+
+   async function getData() {
+      ItinerariesDb =  await axios.get("https://vastyaint-api-itinerary-crud.onrender.com/api/itinerary")
       console.log("CRUD ITINERARY" + ItinerariesDb)
-       
-        setItineraries(ItinerariesDb.data.response.itineray)
-      
-       console.log(itineraries)
-      }
-      useEffect(() => {
-        getData()
-      }, [])
+
+      setItineraries(ItinerariesDb.data.response.itineraries)
+
+      console.log(itineraries)
+
+   }
+   useEffect(() => {
+      getData()
+   }, [])
 
    const [expanded, setExpanded] = useState(false);
+   
 
    const handleExpandClick = () => {
       setExpanded(!expanded);
@@ -69,69 +76,80 @@ function Itinerary() {
    return (
       <>
          <div className="countainerItinerary">
-            <Card sx={{ maxWidth: 500 }}>
-               <CardHeader
-                  avatar={
-                     <Avatar alt="Martin Martinez" src={usuarioOne}/>
-                  }
-                  action={
-                     <IconButton aria-label="settings">
-                        <MoreVertIcon />
-                     </IconButton>
-                  }
-                  title="Martin Martinez"
-               />
-               <CardMedia
-                  component="img"
-                  height="500"
-                  image={ImageParis}
-                  alt="Image Paris"
-               />
-               <CardContent>
-                  <Typography variant="body2" color="text.secondary">
-                  <div className="descriptionItinerary">
-                  Schedule:
-                  </div>
-                  <div className="descriptionItinerary">
-                  Duration:
-                  </div>
-                  <div className="descriptionItinerary">
-                  Price:
-                  </div>
-                  </Typography>
-               </CardContent>
-               <CardActions disableSpacing>
-                  <IconButton aria-label="add to favorites">
-                     <FavoriteIcon />
-                  </IconButton>
-                  <IconButton aria-label="share">
-                     <ShareIcon />
-                  </IconButton>
-                  <ExpandMore
-                     expand={expanded}
-                     onClick={handleExpandClick}
-                     aria-expanded={expanded}
-                     aria-label="show more"
-                  
-                  >
-                     <ExpandMoreIcon />
-                  </ExpandMore>
-               </CardActions>
-               <Collapse in={expanded} timeout="auto" unmountOnExit    sx={{ maxWidth: 700 }}>
-                  <CardContent>
-                     <Typography paragraph text="justify"><strong>WALKING TOUR THROUGH THE CENTER OF PARIS</strong></Typography>
-                     <Typography paragraph>
-                        <div className="paragraphs">
-                        We suggest visiting the emblematic Eiffel Tower. You can photograph yourself from below, walk through the Champ de Mars, or you can choose to climb the monument to see the views from the tower.
-                        From the Champ de Mars you can stroll to Les Invalides, see the church and stroll through the gardens. Opposite Les Invalides is the Rodin Museum with the famous work of "Rodin's Thinker", a stop that you can make if you are interested in the artist's works. Walking through the park of l'Esplanade des Invalides you can reach the banks of the Seine, from where you can go to the Musée d'Orsay.
-                        After visiting the museum, you can cross the river to eat a picnic in the Jardin des Tuileries, and if it is Christmas take the opportunity to see the Christmas markets. From Les Tuileries you can walk along the Seine River towards the Louvre Museum, which we will leave for later or delete the previous museum for a visit to the Louvre. Close to the museum, we find the famous Notre-Dame Cathedral. You can end the day of the tour returning to your accommodation from the metro stop located near the Cathedral.
-                        After the fire that broke out on April 15 in the Notre-Dame de Paris Cathedral, its treasury and its towers are closed and reconstruction and repair work is underway. The security perimeter of the Ile de la Cité has been reduced since April 21. However, it is still impossible to access the immediate surroundings of the cathedral, as well as the Petit Pont and the Pont au Double.
-                        </div>
-                     </Typography>
-                  </CardContent>
-               </Collapse>
-            </Card>
-         </div>
+            {itineraries.length > 0 ?
+               <div className="cardItinerary">
+               <Card sx={{ maxWidth: 500 }}>
+                  {itineraries.map((itinerary) =>
+                  <div>
+                        <CardHeader
+                           avatar={
+                              <Avatar alt="image User" src={itinerary.userImage} />
+                           }
+                           action={
+                              <IconButton aria-label="settings">
+                                 <MoreVertIcon />
+                              </IconButton>
+                           }
+                           name={itinerary.nameUser}
+                           title={itinerary.nameItinerary}
+                        />
+                        <CardMedia
+                           component="img"
+                           height="500"
+                           image={itinerary.imageItinerary}
+                           alt= {itinerary.nameItinerary}
+                        />
+                        <CardContent>
+                           <Typography variant="body2" color="text.secondary">
+                              <div className="descriptionItinerary">
+                                 Schedule: {}
+                              </div>
+                              <div className="descriptionItinerary">
+                                 Duration: {itinerary.duration}
+                              </div>
+                              <div className="descriptionItinerary">
+                                 Price:{itinerary.price}
+                              </div>
+                           </Typography>
+                        </CardContent>
+                        <CardActions disableSpacing>
+                           <IconButton aria-label="add to favorites">
+                              <FavoriteIcon />
+                           </IconButton>
+                           <IconButton aria-label="share">
+                              <ShareIcon />
+                           </IconButton>
+                           <ExpandMore
+                              expand={expanded}
+                              onClick={handleExpandClick}
+                              aria-expanded={expanded}
+                              aria-label="show more"
+
+                           >
+                              <ExpandMoreIcon />
+                           </ExpandMore>
+                        </CardActions>
+                        <Collapse in={expanded} timeout="auto" unmountOnExit sx={{ maxWidth: 700 }}>
+                           <CardContent>
+                              <Typography paragraph text="justify"><strong>{itinerary.nameItinerary}</strong></Typography>
+                              <Typography paragraph>
+                                 <div className="paragraphs">
+                                   {itinerary.description}
+                                 </div>
+                              </Typography>
+                           </CardContent>
+                        </Collapse>
+
+                     </div>
+                  )}
+
+               </Card>
+                   </div>
+               : <Box sx={{ display: 'flex' }}>
+                  <div className="progress"><CircularProgress /></div>
+               </Box>
+                 }
+               </div>
       </>
    );
 }

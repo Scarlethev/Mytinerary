@@ -1,9 +1,16 @@
 .countainerItinerary{
-    min-width:100%;
-    min-height: 500px;
-    display: flex;
+    display:flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+    align-items: center;
     justify-content: center;
-    margin-top: 20px;
+}
+
+.cardItinerary{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .titleItinerary{
@@ -29,7 +36,7 @@
 
 .display{
     display: flex;
-
+    justify-content: center;
 }
 
 .none{
