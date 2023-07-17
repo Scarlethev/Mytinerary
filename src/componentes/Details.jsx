@@ -50,7 +50,7 @@ function Details() {
   return (
     <>
     <div>
-    <LinkRouter to={"/Cities"}>
+    <LinkRouter to={"/Cities"} className="backButton">
        <BsFillReplyAllFill className="backButton"/>
       </LinkRouter>
        {city ?
@@ -74,7 +74,7 @@ function Details() {
                   <MDBCardText className="countainerButtons">
 
                   <LinkRouter>
-                      <MDBBtn onClick={onClick} className={ `buttonItinerary ${onClick} ? changeButtonItinerary : none `}>
+                      <MDBBtn onClick={onClick} className="buttonItinerary">
                        Itinerary One
                       </MDBBtn>
                       </LinkRouter>

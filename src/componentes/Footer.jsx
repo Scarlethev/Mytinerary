@@ -45,9 +45,11 @@ export default function Footer() {
                 <div className="links">
 
                 {
-                NavLinks.map(link => {
+                NavLinks.map((link,index) => {
                         return (
+                        <div key={index}>
                         <LinkRouter className="links" to={link.path}>{link.name}</LinkRouter>
+                        </div>
                         )
                 })
             }

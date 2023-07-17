@@ -20,8 +20,11 @@
     flex-direction: row;
     text-decoration: none;
     margin-right: 30px;
-    background:rgb(51, 112, 226);
     font-size: 16px;
+}
+
+header .NavBar{
+    background-color: #fff;
 }
 
 .NavBar a{
@@ -63,8 +66,10 @@
 
 
 .User{
-width:60px;
-height: 50px;
+width:100px;
+height: 80px;
+color:#fff;
+
 }
 
 

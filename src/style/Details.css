@@ -12,10 +12,9 @@
     display: flex;
     align-items: center ;
     justify-content: flex-end;
-    width:80px;
+    width:100px;
     height: 150px;
     padding-left: 20px;
-    margin-left: 20px;
 }
 
 .cardDetails{
@@ -61,9 +60,11 @@
     width:120px;
 }
 
-.changeButtonItinerary{
-    background-color: #525230;
+ a >.buttonItinerary:hover {
+  background-color:forestgreen;
 }
+
+
 
 
 @media screen and (max-width: 440px){

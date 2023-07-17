@@ -23,8 +23,6 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
-import ImageParis from "../images/ItineraryParis.jpeg"
-import usuarioOne from "../images/usuarioParisOne.jpeg"
 
 
 interface ExpandMoreProps extends IconButtonProps {
@@ -79,9 +77,10 @@ function Itinerary() {
             {itineraries.length > 0 ?
                <div className="cardItinerary">
                <Card sx={{ maxWidth: 500 }}>
-                  {itineraries.map((itinerary) =>
+                  {itineraries.map((itinerary, index) =>
                   <div>
-                        <CardHeader
+                        <CardHeader 
+                        key={index}
                            avatar={
                               <Avatar alt="image User" src={itinerary.userImage} />
                            }
