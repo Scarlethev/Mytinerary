@@ -1,4 +1,4 @@
- import enConstruction from "../images/EnConstruccion.jpg"
+import EnConstruction from "../images/EnConstruccion.jpg"
 import { useEffect, useState } from "react"
 import { Link as LinkRouter } from 'react-router-dom';
 import axios from "axios"
