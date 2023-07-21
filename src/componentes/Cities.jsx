@@ -11,8 +11,8 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import {Link as LinkRouter } from 'react-router-dom';
-//import { IconName } from "react-icons/fc";
-//import { FaBeer, FaLanguage} from "react-icons/fa";
+import { BsGeoAltFill, BsCashStack, BsTranslate } from "react-icons/bs";
+import { FaSearch} from "react-icons/fa";
 import * as React from 'react'
 
 function Cities() {
@@ -22,13 +22,12 @@ function Cities() {
  
   let citiesDb
   async function getData() {
-    citiesDb = await axios.get("https://scarleth-api-cities-crud.onrender.com/Api/cities")
+    citiesDb= await axios.get("https://scarleth-api-cities-crud.onrender.com/Api/cities")
     setCities(citiesDb.data.response.cities)
     setCitiesToFilter(citiesDb.data.response.cities)
-    console.log(cities)
   }
   useEffect(() => {
-    getData()
+     getData()
   }, [])
 
  
@@ -39,7 +38,6 @@ function Cities() {
   }
 
  
-
 const filter=(searched) => {
   var resultadoSearch= citiesToFilter.filter((city)=>{
     if(city.name.toLowerCase().includes(searched.toLowerCase()))
@@ -54,14 +52,15 @@ const filter=(searched) => {
 
   return (
     <>
-    <div className="search">
-     <input value ={search} onChange={searcher} type="search" name="input" id="input" placeholder="Busqueda por pais" />   
+      <div className="containerSearch">
+     <input  className="search" value ={search} onChange={searcher} type="search" name="input" id="input" placeholder="Find your city..." />   
+     <FaSearch className="iconSearch"/>
      </div>
       {cities.length > 0 ?
         <div className="cards">
-          {cities.map(city =>
-            <div className="card">
-              <Card sx={{ maxWidth: 450, minWidth: 150 }}>
+          {cities.map((city,index) =>
+            <div  key={index} className="cardCities">
+              <Card sx={{ maxWidth: 400, minWidth: 150 }}>
                 <CardMedia
                   component="img"
                   alt={city.name}
@@ -73,26 +72,19 @@ const filter=(searched) => {
                   <Typography gutterBottom variant="h5" component="div">
                     {city.name}
                   </Typography>
-                  <Typography variant="body" component="div">
-                    {city.country}
+                  <Typography variant="16px" component="div" ClassName="itemsbodycard">
+                    <BsGeoAltFill/>: {city.country}
                   </Typography>
-                  <div className="iconosCard">
-                    <Typography variant="body" component="div">
-                      {/* <FaBeer /> */}
-                      {city.currency}
+                    <Typography variant="14px" component="div" ClassName="itemsbodycard">
+                    <BsCashStack/>: {city.currency}
+                     </Typography>
+                    <Typography variant="14px" component="div" ClassName="itemsbodycard">
+                    <BsTranslate/> : {city.language}
                     </Typography>
-                    <Typography variant="body" component="div">
-                    {/* <FaLanguage/> */}
-                      {city.language}
-                    </Typography>
-                  </div>
-                  <Typography variant="body2" color="text.secondary">
-                    {/* {city.description} */}
-                  </Typography>
                 </CardContent>
-                <CardActions>
+                <CardActions className="readMore">
                 <LinkRouter to={"/Details/" + city._id}>
-                  <Button size="small">Read More</Button>
+                  <Button size="18">Read More</Button>
                   </LinkRouter>
                 </CardActions>
               </Card>

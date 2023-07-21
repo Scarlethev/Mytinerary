@@ -14,8 +14,7 @@ import { Routes, Route } from "react-router-dom"
 
 
 function App() {
-
-  //PARTE LOGICA//
+  
   return (
     <div className="App">
       <NavBar/>
@@ -26,7 +25,7 @@ function App() {
         <Route path="/Cities" element={<Cities/>}></Route>
         <Route path="/User" element={<User/>}></Route>
         <Route path="/Details/:id" element={<Details/>}></Route>
-        <Route path="/Itinerary" element={<Itinerary/>}></Route>
+        <Route path="/Itinerary/:cities/id" element={<Itinerary/>}></Route>
         </Routes>
       <Footer />
       </div>

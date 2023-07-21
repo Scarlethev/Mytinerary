@@ -9,7 +9,7 @@
   .home{
     background-image: url("../images/fondoDePantalla.JPG.jpeg");
     width: 100% ;
-    height: 700px;
+    height: 650px;
     position: relative;
     background-repeat: no-repeat ;
     background-size:cover;
@@ -50,7 +50,7 @@
     margin-block-start: 0;
     margin-block-end: 0;
     color: #fff;
-    font-weight: 300;
+    font-weight: 400;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
@@ -60,23 +60,36 @@
     justify-content:flex-end;
     width:90%;
     z-index: 1;
-    margin-right: 40px;
+    margin-left: 80px;
     padding-right: 40px;
-    padding-bottom: 20px;
   }
 
   .noneDecoration{
     text-decoration: none;
   }
 
+  .noneDecoration:hover{
+    background-color: yellow;
+    border-radius: 10px;
+  }
+
+
+
   .noneDecoration h1{
-   background-color:#fff;
+   background-color: #fff;
+   border: 2px solid balck;
    color:rgb(51, 112, 226);
    border-radius: 10px;
    margin:0;
-   height: 50px;
+   height: 60px;
    padding: 10px;
+   align-items: center;
   }
+
+  .noneDecoration h1:hover{
+ background-color: yellow;
+   }
+   
   
 @media screen and (max-width: 390px){
   .home{
