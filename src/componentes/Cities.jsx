@@ -31,7 +31,6 @@ function Cities() {
   }, [])
 
  
-
   const searcher = (e) => {
     setSearch(e.target.value)
     filter(e.target.value)
@@ -76,7 +75,7 @@ const filter=(searched) => {
                     <BsGeoAltFill/>: {city.country}
                   </Typography>
                     <Typography variant="14px" component="div" ClassName="itemsbodycard">
-                    <BsCashStack/>: {city.currency}
+                    <BsCashStack/>:  {city.currency}
                      </Typography>
                     <Typography variant="14px" component="div" ClassName="itemsbodycard">
                     <BsTranslate/> : {city.language}

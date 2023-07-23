@@ -42,22 +42,26 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 
 
 
-function Itinerary() {
+function Itinerary(props) {
 
    // const { id } = useParams()
-   const [itineraries, setItineraries] = useState([])
+   const [cities, setCities] = useState([])
 
-   let ItinerariesDb
+   // let ItinerariesDb
+   let citiesDb;
 
    // const {id} =useParams()
 
    async function getData() {
-      ItinerariesDb =  await axios.get("https://vastyaint-api-itinerary-crud.onrender.com/api/itinerary")
-      console.log("CRUD ITINERARY" + ItinerariesDb)
+      citiesDb= await axios.get("https://scarleth-api-cities-crud.onrender.com/Api/cities.itinerary")
+      setCities(citiesDb.data.response.cities.itinerary)
 
-      setItineraries(ItinerariesDb.data.response.itineraries)
+      // ItinerariesDb =  await axios.get("https://vastyaint-api-itinerary-crud.onrender.com/api/itinerary")
+      // console.log("CRUD ITINERARY" + ItinerariesDb)
 
-      console.log(itineraries)
+      // setItineraries(ItinerariesDb.data.response.itineraries)
+
+   console.log(cities)
 
    }
    useEffect(() => {
@@ -74,15 +78,15 @@ function Itinerary() {
    return (
       <>
          <div className="countainerItinerary">
-            {itineraries.length > 0 ?
+            {city.length > 0 ?
                <div className="cardItinerary">
                <Card sx={{ maxWidth: 500 }}>
-                  {itineraries.map((itinerary, index) =>
-                  <div>
+                  {city.map((city, index) =>
+                  <div  key={index}>
                         <CardHeader 
-                        key={index}
                            avatar={
-                              <Avatar alt="image User" src={itinerary.userImage} />
+
+                              <Avatar alt="image User" src={city.userImage} />
                            }
                            action={
                               <IconButton aria-label="settings">
