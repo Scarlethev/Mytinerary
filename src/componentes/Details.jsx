@@ -1,4 +1,4 @@
- import enConstruction from "../images/EnConstruccion.jpg"
+import enConstruction from "../images/EnConstruccion.jpg"
 import { useEffect, useState } from "react"
 import { Link as LinkRouter } from 'react-router-dom';
 import Box from '@mui/material/Box';
@@ -46,7 +46,7 @@ function Details() {
   }
   useEffect(() => {
     getData()
-  },[])
+  }, )
 
   return (
     <>
@@ -57,7 +57,6 @@ function Details() {
        {city ?
         <div className="countainerDetails">
           <h3 className="titleDetails">{city.name.toUpperCase()}</h3>
-          <br />
           <div className="countainerImgAndText">
           <div className="countainerImage">
           <img src={city.image}></img>
@@ -79,24 +78,12 @@ function Details() {
       </div>
 }
     </div >
-
-    <div className={itinerary ? "display" : "none" }>
-      <Itinerary/>
-    </div>
      
-    {/* <div className={itinerary ? "display" : "none" }>
-    
-    {city ?
-    <div>
-    {city.itinerary[0]}
-    </div>:
-  
-    <div>
-      <h3>Didn't found itineraies for this city</h3>
+    <div className={itinerary ? "display" : "none"}>
+    <Itinerary/>
     </div>
-}
-</div> */}
     </>
+   
   )
 }
 
