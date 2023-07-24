@@ -43,16 +43,13 @@ const ExpandMore = styled((props: ExpandMoreProps) => {
 
 
 function Itinerary() {
-
-   // const { id } = useParams()
+   const {id} =useParams()
    const [itineraries, setItineraries] = useState([])
 
    let ItinerariesDb
 
-   // const {id} =useParams()
-
    async function getData() {
-      ItinerariesDb =  await axios.get("https://vastyaint-api-itinerary-crud.onrender.com/api/itinerary")
+      ItinerariesDb = await axios.get("https://vastyaint-api-itinerary-crud.onrender.com/api/itinerary")
       console.log("CRUD ITINERARY" + ItinerariesDb)
 
       setItineraries(ItinerariesDb.data.response.itineraries)

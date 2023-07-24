@@ -60,7 +60,8 @@ header .NavBar{
 .MyItinerary{
     text-decoration: none;
     list-style: none;
-    font-size: 25px;
+    font-size: 35px;
+    font-weight:lighter;
     color:#fff;
 }
 

@@ -55,8 +55,8 @@ function ResponsiveAppBar() {
         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
         <LinkRouter to={"/Home"}>
                 <div className="logoYtext">
-                     <img className="Logo" alt= "Logo de empresa"src={Logo}/>
-                         <h3 className="MyItinerary">MyTinerary</h3>
+                     {/* <img className="Logo" alt= "Logo de empresa"src={Logo}/> */}
+                         <h1 className="MyItinerary">MyTinerary</h1>
                     </div>
                 </LinkRouter>
                 </Box>

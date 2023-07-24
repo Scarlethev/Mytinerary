@@ -26,6 +26,7 @@ function Cities() {
     setCities(citiesDb.data.response.cities)
     setCitiesToFilter(citiesDb.data.response.cities)
   }
+
   useEffect(() => {
      getData()
   }, [])
@@ -47,7 +48,6 @@ const filter=(searched) => {
 
   setCities(resultadoSearch);
 }
-
 
   return (
     <>
