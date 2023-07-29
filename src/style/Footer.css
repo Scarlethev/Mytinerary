@@ -3,7 +3,7 @@
     flex-direction: row;
     height: 100px;
     width:100%;
-    background:rgb(51, 112, 226);
+    background:rgb(34,193,195);
     margin-top: 60px;
 }
 
@@ -16,7 +16,8 @@
     align-items: center;
     color:#fff;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
+    font-family:'Lato', sans-serif;
     text-decoration: none;
 }
 
@@ -24,13 +25,10 @@
     justify-content: center;
     display: flex;
     background-color: black;
-    background:rgb(51, 112, 226);
+    background:rgb(34,193,195);
     height: auto;
 }
-  
-.copyright h4{
-    color: rgb(12, 2, 2);
-}
+
 
 
 @media screen and (max-width: 440px) 

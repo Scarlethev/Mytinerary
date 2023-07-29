@@ -10,7 +10,7 @@ export default function Welcome() {
             <h1 className="tituloUno">FIND YOU PERFECT TRIP</h1>
             <h2 className="tituloDos">Designed by insiders who know and love their cities! </h2>
             </div>
-            <div className="callAction">
+            <div>
             <CallAction/>
             </div>
             </div>

@@ -57,7 +57,6 @@ export default function Footer() {
                 </div>
          </section> 
             <section className="copyright">
-                <h4>COPYRIGTH @ 2023 by</h4>
             </section>
         </>
     )
