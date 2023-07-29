@@ -1,4 +1,5 @@
-import enConstruction from "../images/EnConstruccion.jpg"
+import inConstruction from "../images/EnConstruccion.jpg"
+import noFoundItineraries from "../images/no result search icon_6511543.png"
 import { useEffect, useState } from "react"
 import { Link as LinkRouter } from 'react-router-dom';
 import Box from '@mui/material/Box';
@@ -86,7 +87,7 @@ function Details() {
       setClassButton(!classButton);
    }
 
-   const [expanded, setExpanded] = useState(true);
+   const [expanded, setExpanded] = useState(false);
 
 
    const handleExpandClick = () => {
@@ -123,7 +124,7 @@ function Details() {
             {city ?
                <div className="countainerItinerary">
                   {city.itinerary.length > 0 ?
-                     <div>
+                     <div className="cardItinerary">
                         {city.itinerary.map((itinerary, index) =>
                            <Card sx={{ maxWidth: 550 }}>
                               <CardHeader
@@ -188,7 +189,8 @@ function Details() {
                         )}
                      </div> 
                     : <div className="noFoundItineraries">
-                        <img src={dontFoundItineraries} alt="Icon About Itineraries Dont Found it"  />
+                        <img src={noFoundItineraries} alt="Icon About Itineraries Dont Found it"  />
+                        <p>No itineraries found for this city</p>
                         </div>
                   }
                </div> :
