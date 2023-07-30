@@ -19,13 +19,19 @@ import Logo from "../images/logo-1.png"
 import { Link as LinkRouter } from 'react-router-dom';
 
 const NavLinks = [
-          
-           {
-              name: "Cities",
-              path: "/Cities"
-          }
-          
-          ]
+
+
+  {
+    name: "Home",
+    path: "/Home"
+  },
+
+  {
+    name: "Cities",
+    path: "/Cities"
+  }
+
+]
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -52,14 +58,13 @@ function ResponsiveAppBar() {
     <AppBar className='NavBar' position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-        <LinkRouter to={"/Home"}>
-                <div className="logoYtext">
-                     <img className="Logo" alt= "Logo de empresa"src={Logo}/>
-                         <h3 className="MyItinerary">MyTinerary</h3>
-                    </div>
-                </LinkRouter>
-                </Box>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <LinkRouter to={"/Home"}>
+              <div className="logoYtext">
+                <h1 className="MyItinerary">MyTinerary</h1>
+              </div>
+            </LinkRouter>
+          </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -90,50 +95,49 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {NavLinks.map((page,index) => (
+              {NavLinks.map((page, index) => (
                 <MenuItem key={index} onClick={handleCloseNavMenu}>
                   <LinkRouter to={page.path}>
-                  <div className="NavLi">
-                  <Typography textAlign="center">
-                    {page.name}
-                    </Typography>
+                    <div>
+                      <Typography textAlign="center">
+                        {page.name}
+                      </Typography>
                     </div>
                   </LinkRouter>
                 </MenuItem>
-             
+
               ))}
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-          <LinkRouter to={"/Home"}>
-                <div className="logoYtext">
-                     <img className="Logo" alt="Logo de empresa"src={Logo}/>
-                         <h3 className="MyItinerary">MyTinerary</h3>
-                    </div>
-                </LinkRouter>
-                </Box> 
-                  
+            <LinkRouter to={"/Home"}>
+              <div className="logoYtext">
+                <h3 className="MyItinerary">MyTinerary</h3>
+              </div>
+            </LinkRouter>
+          </Box>
+
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {NavLinks.map((page,index) => (
-              
-              <LinkRouter to={page.path}>
-              <Button
-                key={index}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block', size:"20px" }}
-              >
-                 <div className="NavLi">
-                {page.name}
-                </div>
-              </Button>
+            {/* {NavLinks.map((page, index) => ( */}
+
+              <LinkRouter to={"/Cities"}>
+                <Button
+                  // key={index}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'black', display: 'block', size: "20px" }}
+                >
+                  <div className="NavLi">
+                  Cities
+                  </div>
+                </Button>
               </LinkRouter>
-            ))}
+            {/* ))} */}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 3}}>
-                <PersonOutlineRoundedIcon className="User" alt="Remy Sharp" sx={{ fontSize: 40}}/>
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 3 }}>
+                <PersonOutlineRoundedIcon className="User" alt="Remy Sharp" sx={{ fontSize: 40 }} />
               </IconButton>
             </Tooltip>
             <Menu
@@ -153,11 +157,13 @@ function ResponsiveAppBar() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <div className="NavLi">
-                  <Typography textAlign="center" color="black" >{setting}</Typography>
-                  </div>
-                </MenuItem>
+                <LinkRouter to={"/User"}>
+                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                    <div className="NavLi">
+                      <Typography textAlign="center" color="black" >{setting}</Typography>
+                    </div>
+                  </MenuItem>
+                </LinkRouter>
               ))}
             </Menu>
           </Box>
